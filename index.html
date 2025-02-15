@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/ico_ahorcado.jpg" type="image/x-icon">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <div class="container" style="visibility: hidden;" id="container">
+        <h1 class="titulo">Juego del Ahorcado</h1>
+        <canvas id="ahorcado" width="200" height="250"></canvas>
+        <p id="word" class="hidden-word"></p>
+        <p class="intentos">Intentos restantes: <span id="attempts">5</span></p>
+        <div id="keyboard" class="keyboard"></div>
+    </div>
+    
+    <div id="modal-reinicio" class="modal-reinicio" style="display: none;">
+        <p id="resultado-mensaje"></p>
+        <p id="palabra-correcta"></p>
+        <button id="reiniciar">Volver a jugar</button>
+    </div>
+    
+    <div class="container-modal" id="modal">
+        <p class="title-modal">Elige una dificultad</p>
+        <div class="dificultad">
+            <button id="facil">Fácil</button>
+            <button id="intermedio">Intermedio</button>
+            <button id="dificil">Difícil</button>
+        </div>
+        <button class="btnIniciar" id="iniciar">Iniciar Juego</button>    
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="modos/facil.js"></script>
+    <script src="modos/intermedio.js"></script>
+    <script src="modos/dificil.js"></script>
+</body>
+</html>
